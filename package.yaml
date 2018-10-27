@@ -1,0 +1,46 @@
+name: data-science-from-scratch-haskell
+version: '0.0.0'
+category: template
+synopsis: Data Science from Scratch, the Haskell Way
+description: >
+  aims to reproduce all code examples from Data Science from Scratch using Haskell
+author: Thomas Peiselt
+github: dispanser/data-science-from-scratch-haskell
+license: MIT
+
+ghc-options: -Wall
+dependencies:
+  - base >= 4.8.0 && <5
+
+library:
+  source-dirs: src
+  dependencies:
+    - containers
+    - debug
+
+tests:
+  spec:
+    source-dirs: spec
+    main: Spec.hs
+    dependencies:
+      - data-science-from-scratch-haskell
+      - hspec
+  tasty:
+    source-dirs: tasty
+    main: TastyTests.hs
+    dependencies:
+      - data-science-from-scratch-haskell
+      - hspec
+      - tasty
+      - tasty-hunit
+      - tasty-hspec
+
+benchmarks:
+  benchmark-criterion:
+    main: Bench.hs
+    source-dirs: bench
+    ghc-options:
+      - -threaded
+    dependencies:
+      - data-science-from-scratch-haskell
+      - criterion

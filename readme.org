@@ -1,0 +1,5 @@
+* Data Science from Scratch: the Haskell Way
+
+This repository aims to reproduce all code examples from Data Science from Scratch using Haskell.
+
+Current Status: Just started.
