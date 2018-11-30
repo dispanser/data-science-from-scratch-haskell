@@ -1,8 +1,16 @@
 resolver: lts-12.14
 packages:
   - '.'
-extra-deps: []
+extra-deps:
+  - diagrams-lib-1.4.2.3
+  - diagrams-svg-1.4.2
+  - Chart-1.9
+  # - generic-lens-labels-0.1.0.2
+  # - base-4.10.1.0
+  # - generic-lens-0.5.1.0
+
+allow-newer: true
+
 nix:
-  enable:
-    true
+  enable: true
   packages: []

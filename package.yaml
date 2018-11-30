@@ -16,21 +16,32 @@ library:
   source-dirs: src
   dependencies:
     - containers
+    - unordered-containers
+    - hashable
+    - microlens
+    - Chart
 
 tests:
-  spec:
-    source-dirs: spec
-    main: Spec.hs
-    dependencies:
-      - data-science-from-scratch-haskell
-      - hspec
+  # eval:
+  #   source-dirs: eval
+  #   main: Eval/Libs.hs
+  #   dependencies:
+  #     - data-science-from-scratch-haskell
+  #     - chart-unit
+  #     - microlens
+  #     - generic-lens
+  #     - numhask-prelude
   tasty:
     source-dirs: tasty
     main: TastyTests.hs
     dependencies:
+      - containers
+      - unordered-containers
       - data-science-from-scratch-haskell
       - hspec
+      - QuickCheck
       - tasty
+      - tasty-quickcheck
       - tasty-hunit
       - tasty-hspec
 
