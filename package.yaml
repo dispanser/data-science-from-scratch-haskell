@@ -22,15 +22,15 @@ library:
     - Chart
 
 tests:
-  eval:
-    source-dirs: eval
-    main: Eval/Libs.hs
-    dependencies:
-      - data-science-from-scratch-haskell
-      - chart-unit
-      - microlens
-      - generic-lens
-      - numhask-prelude
+  # eval:
+  #   source-dirs: eval
+  #   main: Eval/Libs.hs
+  #   dependencies:
+  #     - data-science-from-scratch-haskell
+  #     - chart-unit
+  #     - microlens
+  #     - generic-lens
+  #     - numhask-prelude
   tasty:
     source-dirs: tasty
     main: TastyTests.hs
