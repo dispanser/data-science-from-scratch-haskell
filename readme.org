@@ -1,5 +1,6 @@
 * Data Science from Scratch: the Haskell Way
 
-This repository aims to reproduce all code examples from Data Science from Scratch using Haskell.
+This repository aims to reproduce all code examples from [[https://github.com/joelgrus/data-science-from-scratch][Data Science from Scratch]] using Haskell. We'll explore libraries from the haskell ecosystem and perform benchmarks.
 
-Current Status: Just started.
+** DONE Chapter 03 - Visualizing Data
+TODO: export the ihaskell notebook to html, and place a link here.
