@@ -1,5 +1,5 @@
-{
-  nixpkgs ? import <nixpkgs> {}
+{ nixpkgs ? import <nixpkgs> {}
+, compiler ? "ghc843"
 }: 
 
 # let conduit-dbf = with nixpkgs; with stdenv; with haskellPackages;
@@ -11,10 +11,9 @@ let
         conduit-combinators conduit-extra optparse-applicative mkDerivation; };
   dsfs = haskellPackages.callCabal2nix "data-science-from-scratch" ./. {};
     
-in import ../IHaskell/release-8.4.nix {
+in import ../IHaskell/release.nix {
   inherit nixpkgs;
+  inherit compiler;
   packages = haskellPackages: with haskellPackages; [
-	  ihaskell-diagrams ihaskell-blaze ihaskell-charts csv Frames conduit-dbf
-		  (builtins.trace "${dsfs}" dsfs)
-  ];
+	  ihaskell-diagrams ihaskell-charts csv Frames conduit-dbf dsfs ];
 }
