@@ -1,0 +1,20 @@
+* Chapter 4 - Linear Algebra
+
+The implementation based on ~Data.List~ can be found [[LinearAlgebra/ListBased.hs][here]]. This is very close to
+the python code, but comes with a bunch of disadvantages: the performance is
+awful, and the `Vector` type doesn't have any length information. We happily add
+vectors with different number of elements, just as the python code.
+
+** TODO Alternative Libraries
+- [[https://hackage.haskell.org/package/vector-sized][vector-sized]]: wrapper around [[https://hackage.haskell.org/package/vector][vector]] with type level natural representing the size
+- [[https://hackage.haskell.org/package/hmatrix][hmatrix]]: numerical computations based on BLAS and LAPACK
+- [[https://hackage.haskell.org/package/accelerate][accelerate]]: embedded array language for high-performance computations in haskell
+
+** TODO Benchmarks
+Benchmark the list-based implementation against implementations based on the
+libraries from the ~Alternative Libraries~ section.
+
+** TODO Further Readings
+- blog post: [[https://blog.jle.im/entry/fixed-length-vector-types-in-haskell.html][Fixed-Length Vector Types in haskell]]
+- have a look at [[http://hackage.haskell.org/package/vector-space-0.8.6/docs/Data-VectorSpace.html][vector-space]]
+-
