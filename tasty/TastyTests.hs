@@ -1,15 +1,13 @@
 {-# LANGUAGE OverloadedStrings #-}
 
 import           Chapter04.LinearAlgebra.ListBasedVectorProperties (linearAlgebraTests)
-import           Lib                                               (function1)
 import           StatisticsTests
 import           Test.Tasty
-import           Test.Tasty.HUnit
 import           Test.Tasty.QuickCheck
 
 main :: IO ()
 main = do
-  let tests = testGroup "all tests" [ statsTests, hunitTests, linearAlgebraTests ]
+  let tests = testGroup "all tests" [ statsTests, linearAlgebraTests ]
   defaultMain tests
 
 currentTests :: IO ()
