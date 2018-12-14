@@ -1,28 +1,20 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-import Test.Tasty
-import Test.Tasty.Hspec (testSpec)
-import Test.Tasty.HUnit
-import Test.Tasty.QuickCheck
-import Lib (function1)
-import TastyHspec (rootSpec)
-import StatisticsTests
-import Chapter04.LinearAlgebra.ListBasedVectorProperties
-import Data.Complex (Complex)
+import           Chapter04.LinearAlgebra.ListBasedVectorProperties
+import           Data.Complex                                      (Complex)
+import           Lib                                               (function1)
+import           StatisticsTests
+import           Test.Tasty
+import           Test.Tasty.HUnit
+import           Test.Tasty.QuickCheck
 
 main :: IO ()
 main = do
-  s <- testSpec "hspec tests" rootSpec
-  let tests = testGroup "all tests" [ statsTests, hunitTests, linearAlgebraTests, s ]
+  let tests = testGroup "all tests" [ statsTests, hunitTests, linearAlgebraTests ]
   defaultMain tests
 
 currentTests :: IO ()
 currentTests = defaultMain $ testGroup "current development modules" [ linearAlgebraTests ]
-
-hunitTests :: TestTree
-hunitTests = testGroup "Unit tests" [
-    testCase "broken list reverse" $ function1 [1 :: Int, 2, 3] @?= [3, 2, 1]
-  ]
 
 statsTests :: TestTree
 statsTests = testProperties "Statistics"
