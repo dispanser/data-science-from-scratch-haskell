@@ -19,7 +19,7 @@
 -- type to being numbers.
 --
 -- For original source code, see:
--- (https://github.com/joelgrus/data-science-from-scratch/blob/master/code/linear_algebra.py)
+-- <https://github.com/joelgrus/data-science-from-scratch/blob/master/code/linear_algebra.py>
 
 module Chapter04.LinearAlgebra.ListBased
 

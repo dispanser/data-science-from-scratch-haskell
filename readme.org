@@ -4,3 +4,10 @@ This repository aims to reproduce all code examples from [[https://github.com/jo
 
 ** DONE Chapter 03 - Visualizing Data
 TODO: export the ihaskell notebook to html, and place a link here.
+[[file:notebooks/03 - Visualizing Data.html][Notebook]]
+** DONE Chapter 04 - Linear Algebra
+   CLOSED: [2018-12-19 Wed 14:14]
+** DONE Chapter 05 - Statistics
+- [[src/Data/Statistics.hs][statistics module]]
+- [[src/Chapter05/Statistics.hs][chapter code]]
+- [[src/05_statistics.html][jupyter notebook ]]
