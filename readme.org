@@ -3,7 +3,7 @@
 This repository aims to reproduce all code examples from [[https://github.com/joelgrus/data-science-from-scratch][Data Science from Scratch]] using Haskell. We'll explore libraries from the haskell ecosystem and perform benchmarks.
 
 ** DONE Chapter 03 - Visualizing Data
-- IHaskell [[file:notebooks/03 - Visualizing Data.html][Notebook]]
+- IHaskell [[notebooks/03 - Visualizing Data.html][Notebook]]
 ** DONE Chapter 04 - Linear Algebra
    CLOSED: [2018-12-19 Wed 14:14]
 ** DONE Chapter 05 - Statistics
